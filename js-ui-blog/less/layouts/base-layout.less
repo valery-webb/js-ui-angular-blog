@@ -1,0 +1,193 @@
+/* Base layout 
+------------------------*/
+
+header{
+  position:relative;
+  height:85px;
+
+  .logo-offset{
+      display: table;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+  }
+
+  .logo-wrapper {
+      display: table-cell;
+      vertical-align: middle;
+  }
+
+  .logo {
+      display:block;
+      margin: 0 auto;
+      width: 373px;
+      height:65px;
+      background: url(../js-ui-blog/images/logo_960.png) top left no-repeat;
+  }
+}
+
+.offset-wrapper{
+    height:56px;
+    min-width:320px;
+    background:@color-blue-dark;
+    border-bottom:@color-light-border 2px solid;
+}
+
+.content{
+
+  section{
+    padding:40px 15px 15px 15px;
+  }
+
+  article{
+    position:relative;
+    padding-bottom:50px;
+
+    img {
+      width:100%;
+      height:auto;
+    }
+
+    .meta-box {
+      border-top:@color-gray-light 1px solid;
+      border-bottom:@color-gray-light 1px solid;
+
+      .date, .author{
+        line-height:38px;
+      }
+    }
+
+    .article-text {
+      padding:15px 0 0 0;
+    }
+  }
+}
+
+
+/* Media queries
+----------------------------------*/
+
+@media screen and (min-width: 321px) and (max-width: 768px) {
+
+  .content{
+      width:100%;
+  }
+
+  aside{
+    display:none;
+  }
+
+  .help, .info{
+    display:block;
+    z-index:5;
+  }
+
+  .social-toolbar{
+    position:absolute;
+    top:-3px;
+    right:-15px;
+
+    li{
+      float:none;
+    }
+  }
+
+  figure {
+    padding: 0 50px 0 0;
+  }
+
+
+}
+
+@media screen and (max-width: 320px) {
+
+  .offset-wrapper{
+    height:36px;
+  }
+
+  header{
+    height:50px;
+
+    .logo {
+      width: 233px;
+      height:37px;
+      background: url(../js-ui-blog/images/logo_320.png) top left no-repeat;
+    }
+  }
+
+  .content {
+    width:100%;
+
+    article {
+      padding-bottom:70px;
+    }
+  }
+
+  aside{
+    display:none;
+  }
+
+  .toolbar-btn {
+    display:block;
+    width:32px;
+    height:32px;
+    top:2px;
+  }
+
+  .help {
+    left:2px;
+  }
+
+  .info{
+    left:38px;
+  }
+
+  .edit{
+    left:74px;
+  }
+
+  .services-content{
+    top:36px;
+  }
+
+  .menu-toggle {
+    top:2px;
+    right:0;
+  }
+
+  .social-toolbar{
+    position:absolute;
+    bottom:20px;
+  }
+
+  .meta-box{
+    .date, .author {
+      width:50%;
+    }
+  }
+
+  ul.nav-list{
+    display:none;
+  }
+
+  figcaption {
+    font-size:100%;
+    line-height:160%;
+    text-align:center;
+    padding:0 30px;
+    font-weight:bold;
+  }
+
+  figure {
+    background: @color-gray-origin;
+  }
+
+  .article-text {
+    text-align:justify;
+  }
+
+}
+
+
+
+

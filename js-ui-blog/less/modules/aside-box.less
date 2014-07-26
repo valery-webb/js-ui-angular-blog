@@ -1,0 +1,42 @@
+/* Base box 
+------------------------*/
+
+aside.additional {
+  padding:40px 15px 15px 15px;
+
+  .aside-head {
+    line-height:26px;
+    border-bottom: @color-blue-dark 4px solid;
+    color:@color-blue-dark;
+    text-transform: uppercase;
+    font-weight:bold;
+
+    h2 {
+      padding: 0 0 0 45px;
+    }
+
+
+    &:before {
+      width:30px;
+      height:30px;
+      background:@color-blue-dark;
+      display:block;
+      float:left;
+      color:@color-white;
+      text-align:center;
+    }
+
+    &.about:before {
+      content: "?";
+    }
+
+    &.hot-news:before {
+      content: "!";
+    }
+  }
+
+  .aside-text {
+    padding: 20px 0 30px 0;
+    text-align:justify;
+  }
+}

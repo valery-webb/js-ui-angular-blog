@@ -1,0 +1,103 @@
+/* Menu 
+--------------------*/
+
+nav {
+  position:relative;
+}
+
+.services-toolbar{
+  position:relative;
+}
+
+ul.nav-list {
+  display:table;
+  list-style:none;
+  width:55%;
+  margin:0 auto;
+  .clear;
+
+  li {
+    display:table-cell;
+
+    a {
+      display:block;
+      line-height:56px;
+      text-align:center;
+      color:@color-white;
+      text-transform: uppercase;
+      text-decoration:none;
+      padding:0 20px;
+
+      &:hover {
+        background:@color-blue-origin;
+      }
+    }
+  }
+}
+
+ul.nav-list.opened {
+  position:absolute;
+  top:36px;
+  right:0;
+  width:100% !important;
+
+  li {
+    width:100%;
+
+    a {
+      background:@color-blue-light;
+
+      &:hover {
+        background:@color-blue-origin;
+      }
+    }
+  }
+}
+
+
+.toolbar-btn {
+  position:absolute;
+  display:none;
+  border:none;
+  margin:0;
+  padding:0;
+  width:40px;
+  height:56px;
+  top:0px;
+  background:@color-blue-origin;
+  color:@color-white;
+  cursor:pointer;
+
+  &:focus {
+    outline:none;
+  }
+}
+
+.help {
+  left:0px;
+}
+
+.info {
+  right:0px;
+}
+
+.edit{
+    left:60px;
+}
+
+.services-content{
+  position:relative;
+  left:0;
+  top:56px;
+}
+
+.services-content > div {
+  position:absolute;
+  display:none;
+  width:100%;
+  background:@color-blue-light;
+  left:0;
+  top:0;
+  color: @color-blue-dark;
+  padding:10px;
+}

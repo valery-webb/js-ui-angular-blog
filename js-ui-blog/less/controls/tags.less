@@ -1,0 +1,44 @@
+/* Tags
+----------------------*/
+
+.tag-shape {
+  display:inline-block;
+  overflow:hidden;
+  text-transform: capitalize;
+  cursor:pointer;
+  height:18px;
+
+  &:after {
+    content: "";
+    display:inline-block;
+    .arrow-right();
+  }
+
+  &:hover:after {
+    .arrow-right(9px, @color-blue-light)
+  }
+
+  .tag-content {
+    position:relative;
+    background:@color-blue-dark;
+    float:left;
+    padding:0 20px;
+    color: @color-white;
+    font:95%/120% @base-font;
+
+    &:hover {
+      background:@color-blue-light;
+    }
+
+    &:after{
+      content: "";
+      position: absolute;
+      display:block;
+      .cicle(7px);
+      top:5px;
+      right:0;
+      background:@color-white;
+    }
+  }
+}
+

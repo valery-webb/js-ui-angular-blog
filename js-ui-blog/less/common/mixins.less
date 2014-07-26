@@ -1,0 +1,22 @@
+/* Mixins
+----------------*/
+
+.arrow-right (@arr-height: 9px, @arr-color: @color-blue-dark) {
+  width: 0;
+  height: 0;
+  border-top: @arr-height solid transparent;
+  border-bottom: @arr-height solid transparent;
+  border-left: @arr-height * 1.1 solid @arr-color;
+}
+
+.cicle (@radius: 10px) {
+  width: @radius;
+  height:@radius;
+  border-radius: @radius;
+}
+
+.clear {
+  overflow: hidden;
+  zoom: 1;
+}
+

@@ -1,0 +1,71 @@
+/* Utils
+--------------------*/
+
+.row-wrapper{
+  margin:0 auto;
+  max-width:960px;
+  min-width:320px;
+
+  &*{
+    box-sixing: border-box;
+  }
+}
+
+.h-row:before,
+.h-row:after,
+.row-wrapper:before,
+.row-wrapper:after {
+  content: " ";
+  display: table;
+}
+
+.h-row:after,
+.row-wrapper:after {
+  clear:both;
+}
+
+.clmn-1, .clmn-2, .clmn-3,
+.clmn-4, .clmn-5, .clmn-6,
+.clmn-7, .clmn-8, .clmn-9,
+.clmn-10, .clmn-11, .clmn-12{
+    float:left;
+}
+
+.clmn-1 { width:8.333333333333332%; }
+.clmn-2 { width:16.666666667%; }
+.clmn-3 { width:25%; }
+.clmn-4 { width:33.333333333%; }
+.clmn-5 { width:41.666666667%; }
+.clmn-6 { width:50%; }
+.clmn-7 { width:58.333333333% }
+.clmn-8 { width:66.666666667%; }
+.clmn-9 { width:75%; }
+.clmn-10 { width: 83.333333333%; }
+.clmn-11 { width:91.666666667%; }
+.clmn-12 { width: 100%; }
+
+
+.fixed-element{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:3;
+}
+
+.hide{
+  display:none;
+}
+
+
+@media screen and (max-width: 320px) {
+  .clmn-1, .clmn-2, .clmn-3,
+  .clmn-4, .clmn-5, .clmn-6,
+  .clmn-7, .clmn-8, .clmn-9,
+  .clmn-10, .clmn-11, .clmn-12{
+    width:100%;
+  }
+}
+
+
+
