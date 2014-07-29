@@ -10,4 +10,5 @@ define([
     './latest-ctrl',
     './html-ctrl',
     './design-ctrl',
+    './add-post-ctrl',
 ], function () {});

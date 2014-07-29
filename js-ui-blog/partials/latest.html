@@ -1,1 +1,24 @@
-<p>latest page...</p>
+<a href="#/add-post">Add new post</a>
+<div ng-repeat="post in posts">
+<article>
+    <figure>
+        <img ng-src="{{post.url}}" />
+        <figcaption><h3>{{post.title}}</h3></figcaption>
+    </figure>
+    <div class="meta-box h-row">
+        <div class="clmn-3 date">{{post.date['$date']}}</div>
+        <div class="clmn-3 author">{{post.author}}</div>
+        <div class="clmn-6 social-wrapper">
+            <ul class="social-toolbar">
+                <li><a href="#" title="">f 1</a></li>
+                <li><a href="#" title="">g 17</a></li>
+                <li><a href="#" title="">tw 5</a></li>
+                <li><a href="#" title="">в 47</a></li>
+                <li><a href="#" title="">я 14</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="h-row">
+        <p class="article-text">{{post.body}}</p>
+    </div>
+</article>
