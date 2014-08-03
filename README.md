@@ -18,7 +18,7 @@ custom grid system: utils.less
 <br />
 polyfills: html5shiv, respondjs
 
-
+<hr />
 <b>PROJECT DOCS:</b>
 
 1. CSS:
