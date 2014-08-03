@@ -18,3 +18,30 @@ custom grid system: utils.less
 <br />
 polyfills: html5shiv, respondjs
 
+
+PROJECT DOCUMENTATION:
+
+1. CSS:
+  * Custom 12's grid system: ".clmn-1" --- ".clmn-12" wraped into ".h-row"
+  * ".row-wrapper" correct viewport's holder (min-width/max-width values)
+  * ".offset-wrapper" is equals to body width container
+
+2. DEFINING & LOADING MODULES:
+  * module.js is factory of modules (e.g. app.controllers.ctrlOne, app.directives.dirOne etc. )
+  * index.js is async modules loader
+
+
+3. JS CORE UI COMPONENTS:
+  "core-modal-dialog"
+  * directive name starts with: <core-directiveName></core-directiveName>
+  * "templateUrl" is source for base directive template
+  * custom directive content loading via "ng-include" into the directive:
+
+  <pre>
+      <core-modal-dialog>
+        <!-- //modal content will included from  ng-include source -->
+        <div ng-include src=" 'partials/add-post-form.html' "></div>
+    </core-modal-dialog>
+  </pre>
+
+

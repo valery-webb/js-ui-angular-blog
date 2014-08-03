@@ -1,5 +1,11 @@
-<a href="#/add-post" style="color:black;border:#ccc 1px solid;padding:5px; display:inline-block;margin-bottom:10px;"><strong>ADD NEW POST</strong></a>
-<br />
+
+    <button ng-click='toggleModal()'>Add New Post</button>
+    <core-modal-dialog>
+        <!-- //Modal Content Goes here... -->
+        <div ng-include src=" 'partials/add-post-form.html' "></div>
+    </core-modal-dialog>
+
+
 <div ng-repeat="post in posts">
 <article>
     <figure>

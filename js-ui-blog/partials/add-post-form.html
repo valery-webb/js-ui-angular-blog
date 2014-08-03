@@ -1,4 +1,4 @@
-<form onsubmit="javascript:void(0)">
+<form onsubmit="javascript:void(0)" ng-controller="AddPostCtrl">
     <fieldset>
         <label for="postTitle"><strong>Post Title:</strong></label><br />
         <input id="postTitle" name="" type="text">
@@ -8,6 +8,7 @@
         <textarea id="postDescription" style="width:450px; height:300px;"></textarea>
     </fieldset>
     <fieldset>
-        <button>Add Post</button>
+        <button ng-click="addPost()">Add Post</button>
+        <button ng-click='hideModal()'>Close</button>
     </fieldset>
 </form>
