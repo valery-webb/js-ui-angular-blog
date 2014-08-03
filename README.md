@@ -37,11 +37,12 @@ PROJECT DOCUMENTATION:
   * "templateUrl" is source for base directive template
   * custom directive content loading via "ng-include" into the directive:
 
+```html
   <pre>
       <core-modal-dialog>
-        <!-- //modal content will included from  ng-include source -->
+        <!-- needed modal content will included from  ng-include source -->
         <div ng-include src=" 'partials/add-post-form.html' "></div>
     </core-modal-dialog>
   </pre>
-
+```
 
