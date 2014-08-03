@@ -19,23 +19,24 @@ custom grid system: utils.less
 polyfills: html5shiv, respondjs
 
 <hr />
-<b>PROJECT DOCS:</b>
+<h2><b>PROJECT DOCS:</b></h2>
 
 1. CSS:
   * Custom 12's grid system: ".clmn-1" --- ".clmn-12" wraped into ".h-row"
   * ".row-wrapper" correct viewport's holder (min-width/max-width values)
   * ".offset-wrapper" is equals to body width container
 
-2. DEFINING & LOADING MODULES:
-  * module.js is factory of modules (e.g. app.controllers.ctrlOne, app.directives.dirOne etc. )
-  * index.js is async modules loader
+2. DECLARATION & LOADING MODULES:
+  * <b>1. Module declaration</b> (module.js) is factory of modules.
+  * <b>2. Module loader </b> (index.js) is async modules loader.
+  * <b>3. Module component </b> (module-name.js).
 
 
 3. JS CORE UI COMPONENTS:
   "core-modal-dialog"
   * directive name starts with:
   ```html
-  <core-directiveName></core-directiveName>
+  <core-directive-name></core-directive-name>
   ```
   * "templateUrl" is source for core directive template "core-modal-dialog.html"
   * custom directive content loading via "ng-include" into the directive:
