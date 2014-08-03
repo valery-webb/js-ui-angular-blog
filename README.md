@@ -21,34 +21,32 @@ polyfills: html5shiv, respondjs
 <hr />
 <h2><b>PROJECT DOCS:</b></h2>
 
-1. CSS:
+<b>1. CSS:</b>
   * Custom 12's grid system: ".clmn-1" --- ".clmn-12" wraped into ".h-row"
   * ".row-wrapper" correct viewport's holder (min-width/max-width values)
   * ".offset-wrapper" is equals to body width container
 
-2. DECLARATION & LOADING MODULES:
+<b>2. DECLARATION & LOADING MODULES:</b>
   * <b>1. Module declaration</b> (module.js) is factory of modules.
   * <b>2. Module loader </b> (index.js) is async modules loader.
   * <b>3. Module component </b> (module-name.js).
 
 
-3. JS CORE UI COMPONENTS:
-  "core-modal-dialog"
-  * directive name starts with:
+<b>3. JS CORE UI COMPONENTS:</b>
+  * Core directives naming:
   ```html
   <core-directive-name></core-directive-name>
   ```
   * "templateUrl" is source for core directive template "core-modal-dialog.html"
   * custom directive content loading via "ng-include" into the directive:
-```html
-    <core-modal-dialog>
-        <!-- needed modal content will included from  ng-include source -->
-        <div ng-include src=" 'partials/add-post-form.html' "></div>
-    </core-modal-dialog>
-```
-  You can use any controller in modals, just add controller
-  which you need:
+  ```html
+  <core-modal-dialog>
+      <!-- injecting custom modal content via ng-include src -->
+      <div ng-include src=" 'partials/add-post-form.html' "></div>
+  </core-modal-dialog>
+  ```
+  * for any logic in custom modal content, just add the controller:
   ```html
     <form ng-controller="AddPostCtrl">
     </form>
-```
+  ```
