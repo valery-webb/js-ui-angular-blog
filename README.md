@@ -34,19 +34,19 @@ polyfills: html5shiv, respondjs
 
 <b>3. JS CORE UI COMPONENTS:</b>
   * Core directives naming:
-  ```html
+```html
   <core-directive-name></core-directive-name>
   ```
   * "templateUrl" is source for core directive template "core-modal-dialog.html"
   * custom directive content loading via "ng-include" into the directive:
-  ```html
+```html
   <core-modal-dialog>
       <!-- injecting custom modal content via ng-include src -->
       <div ng-include src=" 'partials/add-post-form.html' "></div>
   </core-modal-dialog>
-  ```
+```
   * for any logic in custom modal content, just add the controller:
-  ```html
+```html
     <form ng-controller="AddPostCtrl">
     </form>
-  ```
+```
