@@ -33,7 +33,10 @@ polyfills: html5shiv, respondjs
 
 3. JS CORE UI COMPONENTS:
   "core-modal-dialog"
-  * directive name starts with: "<core-directiveName></core-directiveName>""
+  * directive name starts with:
+  ```html
+  <core-directiveName></core-directiveName>
+  ```
   * "templateUrl" is source for core directive template "core-modal-dialog.html"
   * custom directive content loading via "ng-include" into the directive:
 ```html
@@ -42,7 +45,7 @@ polyfills: html5shiv, respondjs
         <div ng-include src=" 'partials/add-post-form.html' "></div>
     </core-modal-dialog>
 ```
-  * You can use any controller in modals, just add controller
+  You can use any controller in modals, just add controller
   which you need:
   ```html
     <form ng-controller="AddPostCtrl">
