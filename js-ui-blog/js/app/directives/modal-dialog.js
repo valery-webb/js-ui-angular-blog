@@ -14,7 +14,7 @@ define(['./module'], function (directives) {
 
             transclude: true,
 
-            templateUrl: 'partials/modal-dialog.html',
+            templateUrl: 'partials/core-modal-dialog.html',
 
             link: function(scope, element, attrs) {
 

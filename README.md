@@ -19,7 +19,7 @@ custom grid system: utils.less
 polyfills: html5shiv, respondjs
 
 
-PROJECT DOCUMENTATION:
+<b>PROJECT DOCUMENTATION:</b>
 
 1. CSS:
   * Custom 12's grid system: ".clmn-1" --- ".clmn-12" wraped into ".h-row"
@@ -34,15 +34,19 @@ PROJECT DOCUMENTATION:
 3. JS CORE UI COMPONENTS:
   "core-modal-dialog"
   * directive name starts with: <core-directiveName></core-directiveName>
-  * "templateUrl" is source for base directive template
+  * "templateUrl" is source for core directive template "core-modal-dialog.html"
   * custom directive content loading via "ng-include" into the directive:
 
 ```html
-  <pre>
-      <core-modal-dialog>
+    <core-modal-dialog>
         <!-- needed modal content will included from  ng-include source -->
         <div ng-include src=" 'partials/add-post-form.html' "></div>
     </core-modal-dialog>
-  </pre>
 ```
+  * You can use any controller in modals, just add controller
+  which you need here:
 
+  ```html
+    <form ng-controller="AddPostCtrl">
+    </form>
+```
