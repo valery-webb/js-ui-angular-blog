@@ -8,7 +8,10 @@ define(['./module'], function (directives) {
 
             restrict: 'E',
 
-            scope: true,
+            scope: false,
+            //scope: {
+                //posts: '='
+            //},
 
             templateUrl: 'partials/blog-article.html',
         };
