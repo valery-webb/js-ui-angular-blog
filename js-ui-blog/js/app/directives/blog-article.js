@@ -9,9 +9,6 @@ define(['./module'], function (directives) {
             restrict: 'E',
 
             scope: false,
-            //scope: {
-                //posts: '='
-            //},
 
             templateUrl: 'partials/blog-article.html',
         };
