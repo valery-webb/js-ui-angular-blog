@@ -5,6 +5,7 @@ js-ui-angular-blog
   * Clone this repo
   * Install nodejs
   * Install grunt
+  * Run 'npm install' from root directory
   * Make build by command 'grunt'
   * Watch less by command 'grunt run-less'
 

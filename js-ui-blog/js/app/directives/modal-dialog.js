@@ -2,7 +2,7 @@ define(['./module'], function (directives) {
 
     'use strict';
 
-    directives.directive('coreModalDialog', ['version', function (version) {
+    directives.directive('coreModalDialog', function () {
 
         return {
 
@@ -29,5 +29,5 @@ define(['./module'], function (directives) {
                 };
             }
         };
-    }])
+    })
 });

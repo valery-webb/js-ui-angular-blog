@@ -11,8 +11,7 @@ define(['./module'], function (controllers) {
                 angular.forEach(data, function (value, key) {
                     var date = value.date['$date'],
                         dateToConvert =  new Date(date);
-                        dateToConvert = dateToConvert.toString().substring(0, 21);
-                        value.date['$date'] = dateToConvert;
+                        value.date['$date'] = dateToConvert.toString().substring(0, 21);
                 });
 
                 $scope.posts = data;
@@ -20,9 +19,5 @@ define(['./module'], function (controllers) {
             error(function (data, status, headers, config) {
 
             });
-
-
-
-
     }]);
 });
