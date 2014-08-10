@@ -31,11 +31,6 @@ define(['./app'], function (app) {
             controller: 'DesignCtrl'
         });
 
-        // $routeProvider.when('/add-post', {
-        //     templateUrl: 'partials/add-post.html',
-        //     controller: 'AddPostCtrl'
-        // });
-
         $routeProvider.otherwise({
             redirectTo: '/latest'
         });

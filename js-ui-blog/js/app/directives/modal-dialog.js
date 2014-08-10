@@ -8,7 +8,7 @@ define(['./module'], function (directives) {
 
             restrict: 'E',
 
-            scope: false,
+            scope: false, // that means that the only parent scope avaliable
 
             replace: true,
 
@@ -16,7 +16,7 @@ define(['./module'], function (directives) {
 
             templateUrl: 'partials/core-modal-dialog.html',
 
-            link: function(scope, element, attrs) {
+            link: function(scope, element, attrs) { // its scope of directive when directive is compiled
 
                 scope.isVisible = false;
 

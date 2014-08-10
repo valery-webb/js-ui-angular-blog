@@ -1,10 +1,16 @@
 <article>
+    <header style="text-align:right;height:auto;cursor:pointer;">
+        <a>update</a>
+        <span>|</span>
+        <a>delete</a>
+    </header>
     <figure>
-        <img ng-src="{{post.url}}" />
+        <!--<img ng-src="{{post.url}}" />-->
+        <img ng-src="images/content/blog_img_001.jpg" />
         <figcaption><h3>{{post.title}}</h3></figcaption>
     </figure>
     <div class="meta-box h-row">
-        <div class="clmn-3 date">{{post.date['$date']}}</div>
+        <div class="clmn-3 date">{{post.date.substring(0, 10)}}</div>
         <div class="clmn-3 author">{{post.author}}</div>
         <div class="clmn-6 social-wrapper">
             <ul class="social-toolbar">

@@ -2,22 +2,34 @@ define(['./module'], function (controllers) {
 
     'use strict';
 
-    controllers.controller('LatestCtrl', ['$scope', '$http', function ($scope, $http) {
+    controllers.controller('LatestCtrl', ['$scope', '$http', 'postsAPI', '$rootScope', function ($scope, $http, postsAPI, $rootScope ) {
 
-        // @todo: move all rest api to the services
-        $http({method: 'GET', url: 'js/app/mocks/posts_updated.json', cache: true}).
-            success(function (data, status, headers, config) {
+        $scope.status;
 
-                angular.forEach(data, function (value, key) {
-                    var date = value.date['$date'],
-                        dateToConvert =  new Date(date);
-                        value.date['$date'] = dateToConvert.toString().substring(0, 21);
+        getPostsList();
+
+        $rootScope.$on('postsListWasUpdated', getPostsList)
+
+        function getPostsList() {
+            postsAPI.getPosts()
+                .success(function (posts) {
+                    $scope.posts = posts;
+                    console.log(posts.length)
+                })
+                .error(function (error) {
+                    $scope.status = 'Unable to load posts list data: ' + error.message;
                 });
+        }
 
-                $scope.posts = data;
-            }).
-            error(function (data, status, headers, config) {
-
-            });
+        function getPost() {
+            postsAPI.getPost('53e4cb549925e3593b73b77e')
+                .success(function (post) {
+                    $scope.post = post;
+                    console.log(post, 'one post')
+                })
+                .error(function (error) {
+                    $scope.status = 'Unable to load post data: ' + error.message;
+                });
+        }
     }]);
 });
