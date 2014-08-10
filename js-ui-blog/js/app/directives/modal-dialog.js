@@ -24,9 +24,11 @@ define(['./module'], function (directives) {
                     scope.isVisible = false;
                 };
 
-                scope.toggleModal = function() {
+                scope.toggleModal = function(e) {
+
                     scope.isVisible = !scope.isVisible;
                 };
+
             }
         };
     })

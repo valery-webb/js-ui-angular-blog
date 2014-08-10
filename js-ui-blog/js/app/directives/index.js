@@ -6,5 +6,5 @@
 define([
     './app-version'
     ,'./modal-dialog'
-    ,'./blog-article'
+    ,'./post'
     ], function () {});

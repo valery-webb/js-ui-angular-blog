@@ -15,6 +15,7 @@ define(['./module'], function (controllers) {
                 .success(function (posts) {
                     $scope.posts = posts;
                     console.log(posts.length)
+                    $rootScope.postsList = posts;
                 })
                 .error(function (error) {
                     $scope.status = 'Unable to load posts list data: ' + error.message;
@@ -31,5 +32,9 @@ define(['./module'], function (controllers) {
                     $scope.status = 'Unable to load post data: ' + error.message;
                 });
         }
+
+        // $scope.updatePost = function () {
+        //     alert('time for updates')
+        // }
     }]);
 });

@@ -2,12 +2,21 @@
 <!-- core modal directive -->
 <button ng-click='toggleModal()'>Add New Post</button>
 <core-modal-dialog>
-    <!-- //Modal Content Goes here... -->
+    <!-- //Core modal plus add form... -->
     <div ng-include src=" 'partials/add-post-form.html' "></div>
 </core-modal-dialog>
 
-<!-- article directive -->
-<div ng-repeat="post in posts">
-    <blog-article></blog-article>
+<!-- post directives -->
+<!-- @todo: create one ctrl for update/delete posts via core modal -->
+<div ng-controller="UpdatePostCtrl">
+    <div ng-repeat="post in posts">
+        <post></post>
+    </div>
+    <div>
+        <core-modal-dialog>
+            <!-- //Core modal plus update form... -->
+            <div ng-include src=" 'partials/update-post-form.html' "></div>
+        </core-modal-dialog>
+    </div>
 </div>
 

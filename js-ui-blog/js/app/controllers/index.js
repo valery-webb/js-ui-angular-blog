@@ -10,6 +10,7 @@ define([
     './latest-ctrl',
     './html-ctrl',
     './design-ctrl',
-    './add-post-ctrl'
-    //'./modal-ctrl'
+    './add-post-ctrl',
+    './post-ctrl',
+    './update-post-ctrl'
 ], function () {});
