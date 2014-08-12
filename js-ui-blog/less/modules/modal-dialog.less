@@ -1,4 +1,4 @@
-.ng-modal-overlay {
+.custom-modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -8,7 +8,7 @@
     background-color: rgba(0,0,0,0.5);
 }
 
-.ng-modal-dialog {
+.custom-modal-dialog {
     width: 600px;
     position: fixed;
     //top: 50%; 
@@ -20,14 +20,23 @@
     border-radius: 5px;
     z-index: 11;
     box-shadow: 4px 4px 80px #000;
+
+    form {
+        padding: 20px;
+
+        textarea{
+            width: 550px;
+            height: 220px;
+        }
+    }
 }
 
-.ng-modal-dialog-content {
+.custom-modal-dialog-content {
     padding:10px;
     text-align: left;
 }
 
-.ng-modal-close {
+.custom-modal-close {
     position: absolute;
     top: 3px;
     right: 5px;

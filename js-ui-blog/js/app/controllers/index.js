@@ -5,12 +5,9 @@
  * which avails each controller of, for example, the `config` constants object.
  **/
 define([
-    './javascript-ctrl',
-    './css-ctrl',
-    './latest-ctrl',
-    './html-ctrl',
-    './design-ctrl',
-    './add-post-ctrl',
-    './post-ctrl',
-    './update-post-ctrl'
+    './page-javascript-ctrl',
+    './page-css-ctrl',
+    './page-latest-ctrl',
+    './page-html-ctrl',
+    './page-design-ctrl'
 ], function () {});

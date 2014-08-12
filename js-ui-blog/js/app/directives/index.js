@@ -5,6 +5,7 @@
  **/
 define([
     './app-version'
-    ,'./modal-dialog'
     ,'./post'
+    ,'./add-post-directive'
+    ,'./update-post-directive'
     ], function () {});

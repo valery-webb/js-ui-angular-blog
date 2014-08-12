@@ -1,6 +1,7 @@
-<article id="{{post._id}}" class="post-article" ng-controller="PostCtrl">
-    <header style="text-align:right;height:auto;cursor:pointer;">
-        <a data-id="{{post._id}}" ng-click="toggleModal(); onUpdatePost($event)">update</a>
+<article id="{{post._id}}" class="post-article">
+
+    <header style="height:auto;cursor:pointer;">
+        <a data-id="{{post._id}}" ng-click='toggleUpdateModal($event);'>update</a>
         <span>|</span>
         <a data-id="{{post._id}}" ng-click="onDeletePost($event)">delete</a>
     </header>

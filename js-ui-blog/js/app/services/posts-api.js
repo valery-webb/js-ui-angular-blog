@@ -8,7 +8,6 @@ define(['./module'], function (services) {
             postsAPI = {};
 
             postsAPI.getPosts = function () {
-                //return $http.get(urlBase, {cache: true});
                 return $http.get(urlBase);
             };
 
@@ -20,8 +19,8 @@ define(['./module'], function (services) {
                 return $http.post(urlBase, post);
             };
 
-            postsAPI.updatePost = function (post) {
-                return $http.put(urlBase + '/' + post._id, post)
+            postsAPI.updatePost = function (id, post) {
+                return $http.put(urlBase + '/' + id, post)
             };
 
             postsAPI.deletePost = function (id) {

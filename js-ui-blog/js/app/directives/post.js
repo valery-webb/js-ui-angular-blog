@@ -8,13 +8,9 @@ define(['./module'], function (directives) {
 
             restrict: 'E',
 
-            scope: true,
+            scope: false,
 
-            templateUrl: 'partials/post.html',
-
-            link: function(scope, element, attrs) { // its scope of directive when directive is compiled
-
-            }
+            templateUrl: 'partials/post.html'
         };
     })
 });

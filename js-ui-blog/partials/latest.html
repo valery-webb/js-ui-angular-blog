@@ -1,22 +1,10 @@
+<button ng-click='toggleAddModal()'>Add Post</button>
 
-<!-- core modal directive -->
-<button ng-click='toggleModal()'>Add New Post</button>
-<core-modal-dialog>
-    <!-- //Core modal plus add form... -->
-    <div ng-include src=" 'partials/add-post-form.html' "></div>
-</core-modal-dialog>
-
-<!-- post directives -->
-<!-- @todo: create one ctrl for update/delete posts via core modal -->
-<div ng-controller="UpdatePostCtrl">
-    <div ng-repeat="post in posts">
-        <post></post>
-    </div>
-    <div>
-        <core-modal-dialog>
-            <!-- //Core modal plus update form... -->
-            <div ng-include src=" 'partials/update-post-form.html' "></div>
-        </core-modal-dialog>
-    </div>
+<div class="post-box" ng-repeat="post in posts">
+    <post></post>
 </div>
+
+<add-post-directive show='modalAddShown'></add-post-directive>
+<update-post-directive show='modalUpdateShown'></update-post-directive>
+
 

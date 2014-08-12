@@ -17,6 +17,7 @@ requirejs.config({
         'angular-resource': {
             deps: ['angular']
         }
+
     },
 
     deps: [

@@ -8,27 +8,27 @@ define(['./app'], function (app) {
     return app.config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/javascript', {
             templateUrl: 'partials/javascript.html',
-            controller: 'JavascriptCtrl'
+            controller: 'PageJavascriptCtrl'
         });
 
         $routeProvider.when('/css', {
             templateUrl: 'partials/css.html',
-            controller: 'CssCtrl'
+            controller: 'PageCssCtrl'
         });
 
         $routeProvider.when('/latest', {
             templateUrl: 'partials/latest.html',
-            controller: 'LatestCtrl'
+            controller: 'PageLatestCtrl'
         });
 
         $routeProvider.when('/html', {
             templateUrl: 'partials/html.html',
-            controller: 'HtmlCtrl'
+            controller: 'PageHtmlCtrl'
         });
 
         $routeProvider.when('/design', {
             templateUrl: 'partials/design.html',
-            controller: 'DesignCtrl'
+            controller: 'PageDesignCtrl'
         });
 
         $routeProvider.otherwise({
