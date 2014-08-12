@@ -14,7 +14,6 @@ define(['./module'], function (controllers) {
             postsAPI.getPosts()
                 .success(function (posts) {
                     $scope.posts = posts;
-                    console.log(posts.length)
                     $rootScope.postsList = posts;
                 })
                 .error(function (error) {
