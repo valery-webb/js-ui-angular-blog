@@ -22,16 +22,12 @@ define(['./module'], function (controllers) {
         }
 
         // @todo flexible and universe show/hide current modal toggling
-        $scope.modalAddShown = false;
-        $scope.modalUpdateShown = false;
-
         $scope.toggleAddModal = function() {
-            $scope.modalAddShown = !$scope.modalAddShown;
+            $scope.modalAddShown = true;
         };
 
         $scope.toggleUpdateModal = function(e) {
-
-            $scope.modalUpdateShown = !$scope.modalUpdateShown;
+            $scope.modalUpdateShown = true;
 
             var postId = e.target.getAttribute('data-id');
                 $rootScope.$broadcast('populateForm', postId)
