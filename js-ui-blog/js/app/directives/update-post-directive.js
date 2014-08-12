@@ -49,7 +49,7 @@ define(['./module'], function (directives) {
                             $rootScope.$broadcast('postsListWasUpdated');
                         }).
                         error(function(error) {
-                            $scope.status = 'Unable to delete post: ' + error.message;
+                            $scope.status = 'Unable to update post: ' + error.message;
                         });
 
                     scope.hideUpdateModal();
