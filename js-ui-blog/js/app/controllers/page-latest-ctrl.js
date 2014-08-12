@@ -5,8 +5,6 @@ define(['./module'], function (controllers) {
     controllers.controller('PageLatestCtrl', ['$scope', '$http', 'postsAPI', '$rootScope', function ($scope, $http, postsAPI, $rootScope ) {
 
         $scope.status;
-        $scope.name = 'NAME__';
-        $scope.WWW = 'WWW';
 
         getPostsList();
 
@@ -40,6 +38,7 @@ define(['./module'], function (controllers) {
                 $rootScope.$broadcast('populateForm', postId)
         };
 
+        // @todo: move to the delete modal directive
         $scope.onDeletePost = function(e) {
             var postId = e.target.getAttribute('data-id');
 

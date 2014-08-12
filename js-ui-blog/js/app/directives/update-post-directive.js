@@ -9,9 +9,7 @@ define(['./module'], function (directives) {
             restrict: 'E',
 
             scope: {
-                show: '=',
-                //posts: '@',
-                postData: '='
+                show: '='
             },
 
             templateUrl: 'partials/update-post-template.html',

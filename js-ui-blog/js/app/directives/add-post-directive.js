@@ -34,7 +34,7 @@ define(['./module'], function (directives) {
                             $rootScope.$broadcast('postsListWasUpdated');
                         }).
                         error(function(error) {
-                            //$scope.status = 'Unable to insert customer: ' + error.message;
+                            //scope.status = 'Unable to add post: ' + error.message;
                         });
 
                     scope.hideAddModal();
