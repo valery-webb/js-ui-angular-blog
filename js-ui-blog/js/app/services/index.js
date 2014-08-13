@@ -7,5 +7,6 @@
  **/
 define([
     './version',
-    './posts-api'
+    './posts-api',
+    './posts-api2'
     ], function () {});

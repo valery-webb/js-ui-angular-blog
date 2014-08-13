@@ -31,7 +31,7 @@ define(['./module'], function (services) {
                 return $http.get(urlBase + '/' + id + '/more_url');
             };
 
-            return postsAPI
+            return postsAPI;
 
     }]);
 });

@@ -2,7 +2,7 @@ define(['./module'], function (controllers) {
 
     'use strict';
 
-    controllers.controller('PageLatestCtrl', ['$scope', '$http', 'postsAPI', '$rootScope', function ($scope, $http, postsAPI, $rootScope ) {
+    controllers.controller('PageLatestCtrl', ['$scope', '$http', 'postsAPI', '$rootScope', 'postsAPI2', function ($scope, $http, postsAPI, $rootScope, postsAPI2) {
 
         $scope.status;
 
@@ -49,3 +49,24 @@ define(['./module'], function (controllers) {
 
     }]);
 });
+
+
+/* $RESOURCE USAGE examples: (just demo) 
+--------------------------------------------------
+$resource GET list example:
+var postsList = postsAPI2.resource.query();
+    postsList.$promise.then(function(data){})
+
+$resource PUT example:
+var updatingPost = postsAPI2.resource.update({id: 'h5gh64g34f2ddf4df'}, {title: 'title', body: 'body'});
+    updatingPost.$promise.then(function(data){})
+
+$resource GET by specific id example:
+var post = postsAPI2.resource.get({id: 'n4n5b4b4bb4bb4'})
+    post.$promise.then(function(data){})
+
+
+$resource POST example:
+var sendingPost = postsAPI2.resource.save({title: 'title', body: 'body'})
+    sendingPost.$promise.then(function(data){})
+----------------------------------------------------------------*/
