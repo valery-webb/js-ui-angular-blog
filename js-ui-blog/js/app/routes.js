@@ -7,32 +7,32 @@ define(['./app'], function (app) {
     'use strict';
     return app.config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/javascript', {
-            templateUrl: 'partials/javascript.html',
+            templateUrl: 'partials/page-javascript.html',
             controller: 'PageJavascriptCtrl'
         });
 
         $routeProvider.when('/css', {
-            templateUrl: 'partials/css.html',
+            templateUrl: 'partials/page-css.html',
             controller: 'PageCssCtrl'
         });
 
         $routeProvider.when('/latest', {
-            templateUrl: 'partials/latest.html',
+            templateUrl: 'partials/page-latest.html',
             controller: 'PageLatestCtrl'
         });
 
         $routeProvider.when('/html', {
-            templateUrl: 'partials/html.html',
+            templateUrl: 'partials/page-html.html',
             controller: 'PageHtmlCtrl'
         });
 
         $routeProvider.when('/design', {
-            templateUrl: 'partials/design.html',
+            templateUrl: 'partials/page-design.html',
             controller: 'PageDesignCtrl'
         });
 
         $routeProvider.otherwise({
-            redirectTo: '/latest'
+            redirectTo: '/pagelatest'
         });
     }]);
 });
