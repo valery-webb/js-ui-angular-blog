@@ -9,5 +9,6 @@ define([
     './page-css-ctrl',
     './page-latest-ctrl',
     './page-html-ctrl',
-    './page-design-ctrl'
+    './page-design-ctrl',
+    './page-post-detailed-ctrl'
 ], function () {});

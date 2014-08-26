@@ -1,9 +1,6 @@
 <article id="{{post._id}}" class="post-article">
-
     <header style="height:auto;cursor:pointer;">
-        <a data-id="{{post._id}}" ng-click='toggleUpdateModal($event);'>update</a>
-        <span>|</span>
-        <a data-id="{{post._id}}" ng-click="onDeletePost($event)">delete</a>
+        <a href="#/latest" class="navigation-link">Back to posts</a>
     </header>
     <figure>
         <!--<img ng-src="{{post.url}}" />-->
@@ -26,7 +23,4 @@
     <div class="h-row">
         <p class="article-text">{{post.body}}</p>
     </div>
-    <footer>
-        <a href="#latest/{{post._id}}" class="navigation-link">Read more...</a>
-    </footer>
 </article>

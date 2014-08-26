@@ -12,7 +12,7 @@ define(['./module'], function (services) {
             };
 
             postsAPI.getPost = function (id) {
-                return $http.get(urlBase + '/' + id);
+                return $http.get(urlBase + '/' + id, {cache: true});
             };
 
             postsAPI.addPost = function (post) {

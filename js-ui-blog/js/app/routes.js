@@ -31,8 +31,13 @@ define(['./app'], function (app) {
             controller: 'PageDesignCtrl'
         });
 
+        $routeProvider.when('/latest/:id', {
+            templateUrl: 'partials/post-detailed.html',
+            controller: 'PagePostDetailedCtrl'
+        });
+
         $routeProvider.otherwise({
-            redirectTo: '/pagelatest'
+            redirectTo: '/latest'
         });
     }]);
 });
