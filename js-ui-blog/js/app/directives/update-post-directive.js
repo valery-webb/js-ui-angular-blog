@@ -27,12 +27,9 @@ define(['./module'], function (directives) {
 
                 function populateForm(obj, postId) {
 
-                var post = $rootScope.postsList.filter(function (post) {
+                    scope.updatingPost = $rootScope.postsList.filter(function (post) {
                         return post._id === postId;
                     })[0];
-
-                    scope.updatingPost = {};
-                    angular.extend(scope.updatingPost, post)
                 }
 
                 scope.onSubmitUpdate = function () {
