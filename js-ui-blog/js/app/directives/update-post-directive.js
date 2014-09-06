@@ -32,15 +32,8 @@ define(['./module'], function (directives) {
                     })[0];
 
                     scope.updatingPost = {};
-
-                    // // @todo: clarify data manipulations - use each iterator
-                    scope.updatingPost._id = postId;
-                    scope.updatingPost.title = post.title;
-                    scope.updatingPost.author =  post.author;
-                    scope.updatingPost.email =  post.email;
-                    scope.updatingPost.body =  post.body;
+                    angular.extend(scope.updatingPost, post)
                 }
-
 
                 scope.onSubmitUpdate = function () {
 

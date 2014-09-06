@@ -2,7 +2,7 @@ define(['./module'], function (controllers) {
 
     'use strict';
 
-    controllers.controller('PageLatestCtrl', ['$scope', '$http', 'postsAPI', '$rootScope', 'postsAPI2', function ($scope, $http, postsAPI, $rootScope, postsAPI2) {
+    controllers.controller('PageLatestCtrl', ['$scope', 'postsAPI', '$rootScope', 'postsAPI2', function ($scope, postsAPI, $rootScope, postsAPI2) {
 
         $scope.status;
 
