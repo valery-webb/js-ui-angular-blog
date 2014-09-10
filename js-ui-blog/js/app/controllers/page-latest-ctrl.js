@@ -2,7 +2,14 @@ define(['./module'], function (controllers) {
 
     'use strict';
 
-    controllers.controller('PageLatestCtrl', ['$scope', 'postsAPI', '$rootScope', 'postsAPI2', function ($scope, postsAPI, $rootScope, postsAPI2) {
+    controllers.controller('PageLatestCtrl',
+        ['$scope'
+        ,'postsAPI'
+        ,'$rootScope'
+        ,'postsAPI2'
+        ,'textModule'
+
+        ,function ($scope, postsAPI, $rootScope, postsAPI2, textModule) {
 
         $scope.status;
 
@@ -13,8 +20,16 @@ define(['./module'], function (controllers) {
         function getPostsList() {
             postsAPI.getPosts()
                 .success(function (posts) {
-                    $scope.posts = posts;
+
                     $rootScope.postsList = posts;
+
+                    angular.forEach(posts, function (post) {
+                        if (post.body) {
+                            post.body = textModule.cutBy100(post.body);
+                        }
+                    })
+
+                    $scope.posts = posts;
                 })
                 .error(function (error) {
                     $scope.status = 'Unable to load posts list data: ' + error.message;

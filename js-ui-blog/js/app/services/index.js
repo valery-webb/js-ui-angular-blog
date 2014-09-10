@@ -8,5 +8,6 @@
 define([
     //'./version',
     './posts-api',
-    './posts-api2'
+    './posts-api2',
+    './text-module'
     ], function () {});
