@@ -1,0 +1,14 @@
+<div class='custom-modal' ng-show='show'>
+    <div class='custom-modal-overlay' ng-click='hideRemoveModal()'></div>
+    <div class='custom-modal-dialog' ng-style='dialogStyle'>
+        <div class='custom-modal-close' ng-click='hideRemoveModal()'>X</div>
+        <br />
+        <br />
+        <p style="padding:10px;">Are you shure that you want to delete post?</p>
+        <br />
+        <div style="padding:10px;">
+        <button ng-click="removePost()">Remove Post</button>
+        <button ng-click='hideRemoveModal()'>Close</button>
+        </div>
+    </div>
+</div>

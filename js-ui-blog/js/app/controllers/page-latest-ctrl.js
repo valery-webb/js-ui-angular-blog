@@ -35,7 +35,7 @@ define(['./module'], function (controllers) {
                 $rootScope.$broadcast('populateForm', postId);
         };
 
-        $scope.onRemovePost = function(e) {
+        $scope.toggleRemoveModal = function(e) {
             $scope.modalRemoveShown = true;
             $rootScope.removingPostId = e.target.getAttribute('data-id');
         };
