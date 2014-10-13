@@ -2,39 +2,26 @@ define(['./module'], function (controllers) {
 
     'use strict';
 
-    controllers.controller('PageLatestCtrl',
-        ['$scope'
-        ,'postsAPI'
-        ,'$rootScope'
-        ,'postsAPI2'
-        ,'textModule'
+    controllers.controller('PageLatestCtrl', ['$scope', '$rootScope', 'pService', 'textModule' ,function ($scope, $rootScope, pService, textModule) {
 
-        ,function ($scope, postsAPI, $rootScope, postsAPI2, textModule) {
+        $scope.posts;
 
-        $scope.status;
+        $scope.updatePage = function() {
 
-        getPostsList();
+            pService.query().$promise.then(function (posts) {
+                $rootScope.postsList = posts;
 
-        $rootScope.$on('postsListWasUpdated', getPostsList);
+                angular.forEach(posts, function (post) {
+                    post.body ? post.body = textModule.cutBy100(post.body) : post.body = null;
+                }, this)
 
-        function getPostsList() {
-            postsAPI.getPosts()
-                .success(function (posts) {
-
-                    $rootScope.postsList = posts;
-
-                    angular.forEach(posts, function (post) {
-                        if (post.body) {
-                            post.body = textModule.cutBy100(post.body);
-                        }
-                    })
-
-                    $scope.posts = posts;
-                })
-                .error(function (error) {
-                    $scope.status = 'Unable to load posts list data: ' + error.message;
-                });
+                $scope.posts = posts;
+            })
         }
+
+        $scope.updatePage();
+        $rootScope.$on('postsListWasUpdated', $scope.updatePage);
+
 
         // @todo flexible and universe show/hide current modal toggling
         $scope.toggleAddModal = function() {
@@ -45,43 +32,15 @@ define(['./module'], function (controllers) {
             $scope.modalUpdateShown = true;
 
             var postId = e.target.getAttribute('data-id');
-                $rootScope.$broadcast('populateForm', postId)
+                $rootScope.$broadcast('populateForm', postId);
         };
 
-        // @todo: move to the delete modal directive
-        $scope.onDeletePost = function(e) {
-            var postId = e.target.getAttribute('data-id');
-
-                postsAPI.deletePost(postId)
-                .success(function () {
-                    $scope.status = 'Post was deleted!';
-                    getPostsList();
-                }).
-                error(function(error) {
-                    $scope.status = 'Unable to delete post: ' + error.message;
-                });
-        }
+        $scope.onRemovePost = function(e) {
+            $scope.modalRemoveShown = true;
+            $rootScope.removingPostId = e.target.getAttribute('data-id');
+        };
 
     }]);
 });
 
 
-/* $RESOURCE USAGE examples: (just demo) 
---------------------------------------------------
-$resource GET list example:
-var postsList = postsAPI2.resource.query();
-    postsList.$promise.then(function(data){console.log(data)}, function(error){console.log(error)})
-
-$resource PUT example:
-var updatingPost = postsAPI2.resource.update({id: 'h5gh64g34f2ddf4df'}, {title: 'title', body: 'body'});
-    updatingPost.$promise.then(function(data){console.log(data)}, function(error){console.log(error)})
-
-$resource GET by specific id example:
-var post = postsAPI2.resource.get({id: 'n4n5b4b4bb4bb4'})
-    post.$promise.then(function(data){console.log(data)}, function(error){console.log(error)})
-
-
-$resource POST example:
-var sendingPost = postsAPI2.resource.save({title: 'title', body: 'body'})
-    sendingPost.$promise.then(function(data){console.log(data)}, function(error){console.log(error)})
-----------------------------------------------------------------*/

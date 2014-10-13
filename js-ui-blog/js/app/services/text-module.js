@@ -8,7 +8,7 @@ define(['./module'], function (services) {
         var START_POINT = 0,
             MAX_LENGTH = 100,
             lastWordRegEx = /\s+\S*$/,
-            hellip = '...'; // @todo: use &hellip; entity
+            hellip = '\u2026';
 
         //public
         return {

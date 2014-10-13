@@ -8,4 +8,5 @@ define([
     ,'./post'
     ,'./add-post-directive'
     ,'./update-post-directive'
+    ,'./remove-post-directive'
     ], function () {});

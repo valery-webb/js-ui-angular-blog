@@ -2,7 +2,7 @@ define(['./module'], function (directives) {
 
     'use strict';
 
-    directives.directive('addPostDirective', ['postsAPI', '$rootScope', function (postsAPI, $rootScope) {
+    directives.directive('addPostDirective', ['pService', '$rootScope', function (pService, $rootScope) {
 
         return {
 
@@ -29,13 +29,9 @@ define(['./module'], function (directives) {
                         body: scope.body
                     }
 
-                    postsAPI.addPost(post)
-                        .success(function () {
-                            $rootScope.$broadcast('postsListWasUpdated');
-                        }).
-                        error(function(error) {
-                            //scope.status = 'Unable to add post: ' + error.message;
-                        });
+                    pService.save(post).$promise.then(function() {
+                        $rootScope.$broadcast('postsListWasUpdated');
+                    })
 
                     scope.hideAddModal();
                 }

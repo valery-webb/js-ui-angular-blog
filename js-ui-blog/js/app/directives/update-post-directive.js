@@ -2,7 +2,7 @@ define(['./module'], function (directives) {
 
     'use strict';
 
-    directives.directive('updatePostDirective', ['postsAPI', '$rootScope', function (postsAPI, $rootScope) {
+    directives.directive('updatePostDirective', ['pService', '$rootScope', function (pService, $rootScope) {
 
         return {
 
@@ -24,7 +24,6 @@ define(['./module'], function (directives) {
 
                 $rootScope.$on('populateForm', populateForm);
 
-
                 function populateForm(obj, postId) {
 
                     scope.updatingPost = $rootScope.postsList.filter(function (post) {
@@ -34,13 +33,9 @@ define(['./module'], function (directives) {
 
                 scope.onSubmitUpdate = function () {
 
-                    postsAPI.updatePost(scope.updatingPost._id, scope.updatingPost)
-                        .success(function () {
-                            $rootScope.$broadcast('postsListWasUpdated');
-                        }).
-                        error(function(error) {
-                            $scope.status = 'Unable to update post: ' + error.message;
-                        });
+                    pService.update({id: scope.updatingPost._id}, scope.updatingPost).$promise.then(function(){
+                        $rootScope.$broadcast('postsListWasUpdated');
+                    })
 
                     scope.hideUpdateModal();
                 }

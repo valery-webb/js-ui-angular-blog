@@ -8,6 +8,6 @@
 define([
     //'./version',
     './posts-api',
-    './posts-api2',
+    './p-service',
     './text-module'
     ], function () {});

@@ -1,15 +1,12 @@
 define(['./module'], function (controllers) {
     'use strict';
-    controllers.controller('PagePostDetailedCtrl', ['$scope', '$routeParams', 'postsAPI', function ($scope, $routeParams, postsAPI) {
+    controllers.controller('PagePostDetailedCtrl', ['$scope', '$routeParams', 'pService', function ($scope, $routeParams, pService) {
 
         $scope.status;
 
-        postsAPI.getPost($routeParams.id)
-            .success(function (post) {
-                $scope.post = post;
-            })
-            .error(function (error) {
-                $scope.status = 'Unable to load posts list data: ' + error.message;
-            });
+        pService.get({id: $routeParams.id }).$promise.then(function (post) {
+            $scope.post = post;
+        })
+
     }]);
 });
