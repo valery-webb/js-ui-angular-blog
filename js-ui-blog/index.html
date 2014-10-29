@@ -26,21 +26,23 @@
 <div class="offset-wrapper">
     <div class="row-wrapper">
     <!-- services controller & ng-repeat goes here... -->
+    
         <div class="services-container">
             <div class="services-toolbar">
                 <button class="toolbar-btn help" data-content="help">?</button>
                 <button class="toolbar-btn info" data-content="info">i</button>
                 <button class="toolbar-btn edit" data-content="edit">e</button>
             </div>
+            <!--
             <div class="row-wrapper services-content">
                 <div data-content="help">help help help</div>
                 <div data-content="info">infi info info</div>
                 <div data-content="edit">edit edit edit</div>
             </div>
+            -->
         </div>
         <nav>
         <!-- ng-repeat for menu items goes here... -->
-            <button type="button" class="toolbar-btn menu-toggle">m</button>
             <ul class="nav-list">
                 <li><a href="#/javascript" title="">javascript</a></li>
                 <li><a href="#/css" title="">css</a></li>
@@ -48,6 +50,7 @@
                 <li><a href="#/html" title="">html</a></li>
                 <li><a href="#/design" title="">design</a></li>
             </ul>
+            <button id="toggle-mobile-menu" type="button" class="toolbar-btn menu-toggle">m</button>
         </nav>
     </div>
 </div>
@@ -105,5 +108,6 @@
     </div>
 </div>
 <script data-main="js/app/main.js" src="js/3p/require.js"></script>
+<script type="text/javascript" src="temporary-layout.js"></script>
 </body>
 </html>

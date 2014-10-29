@@ -6,15 +6,15 @@ header{
   height:85px;
 
   .logo-offset{
-      display: table;
-      position: absolute;
-      height: 100%;
-      width: 100%;
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
   }
 
   .logo-wrapper {
-      display: table-cell;
-      vertical-align: middle;
+    display: table-cell;
+    vertical-align: middle;
   }
 
   .logo {
@@ -26,11 +26,10 @@ header{
   }
 }
 
-.offset-wrapper{
-    height:56px;
-    min-width:320px;
-    background:@color-blue-dark;
-    border-bottom:@color-light-border 2px solid;
+.offset-wrapper {
+  min-width:320px;
+  background:@color-blue-dark;
+  border-bottom:@color-light-border 2px solid;
 }
 
 .content{
@@ -95,11 +94,12 @@ header{
 
   .social-toolbar{
     position:absolute;
-    top:-3px;
+    top: 33px;
     right:-15px;
 
     li{
       float:none;
+      margin-bottom:3px;
     }
   }
 
@@ -107,13 +107,22 @@ header{
     padding: 0 50px 0 0;
   }
 
+  .post-article {
+    header {
+      padding-right: 50px;
+    }
+  }
+
 
 }
 
 @media screen and (max-width: 320px) {
 
-  .offset-wrapper{
-    height:36px;
+  .offset-wrapper {
+  border-bottom: 0;
+    .row-wrapper {
+      min-height: 36px;
+    }
   }
 
   header{
@@ -177,8 +186,13 @@ header{
     }
   }
 
-  ul.nav-list{
+  ul.nav-list {
     display:none;
+
+    li {
+      float: none;
+      width: 100%;
+    }
   }
 
   figcaption {
@@ -199,6 +213,28 @@ header{
 
 }
 
+/* Custom points resize fixes 
+-----------------------------------*/
+@media screen and (min-width: 500px) and (max-width: 580px) {
+    ul.nav-list{
+      li {
+        font-size: 80%;
+      }
+  }
 
+  ul.nav-list li a {
+    padding: 0 10px;
+  }
+}
 
+@media screen and (min-width: 321px) and (max-width: 499px) {
+    ul.nav-list{
+      li {
+        font-size: 70%;
+      }
+    }
 
+    ul.nav-list li a {
+    padding: 0 5px;
+  }
+}

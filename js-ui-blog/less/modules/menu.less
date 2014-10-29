@@ -3,6 +3,7 @@
 
 nav {
   position:relative;
+  text-align: center;
 }
 
 .services-toolbar{
@@ -10,23 +11,22 @@ nav {
 }
 
 ul.nav-list {
-  display:table;
+  display: inline-block;
+  vertical-align: middle;
   list-style:none;
-  width:55%;
-  margin:0 auto;
   .clear;
 
   li {
-    display:table-cell;
+    float: left;
+    padding: 3px 0;
 
     a {
       display:block;
-      line-height:56px;
-      text-align:center;
+      line-height:50px;
       color:@color-white;
       text-transform: uppercase;
       text-decoration:none;
-      padding:0 20px;
+      padding:0 25px;
 
       &:hover {
         background:@color-blue-origin;
@@ -35,25 +35,30 @@ ul.nav-list {
   }
 }
 
-ul.nav-list.opened {
-  position:absolute;
-  top:36px;
-  right:0;
-  width:100% !important;
+ul.nav-list.mobile-opened {
+  display: block;
+  li:first-child {
+    margin-top: 36px;
+  }
 
   li {
-    width:100%;
-
-    a {
-      background:@color-blue-light;
-
-      &:hover {
-        background:@color-blue-origin;
-      }
-    }
+    padding: 0;
+    border-bottom: #f2f2f2 1px solid;
   }
-}
 
+  li > a {
+    line-height: 36px;
+    background: #e1effc;
+    color: #6b9ace;
+  }
+
+  li > a:hover {
+    background: #b4d9fc;
+
+  }
+
+
+}
 
 .toolbar-btn {
   position:absolute;
