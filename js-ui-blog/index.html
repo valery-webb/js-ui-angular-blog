@@ -15,98 +15,93 @@
 </head>
 <body>
     <div class="row-wrapper">
-        <header class="clmn-12">
-            <div class="logo-offset">
-                <div class="logo-wrapper">
-                    <a class="logo" href="index.html" title=""></a>
-                </div>
-            </div>
+        <header class="clmn-12 logo-holder">
+            <a class="logo" href="index.html" title=""></a>
         </header>
     </div>
-<div class="offset-wrapper">
+    <div class="offset-wrapper">
+        <div class="row-wrapper">
+        <!-- services controller & ng-repeat goes here... -->
+            <div class="services-container">
+                <div class="services-toolbar">
+                    <button class="toolbar-btn help" data-content="help">?</button>
+                    <button class="toolbar-btn info" data-content="info">i</button>
+                    <button class="toolbar-btn edit" data-content="edit">e</button>
+                </div>
+                <!--
+                <div class="row-wrapper services-content">
+                    <div data-content="help">help help help</div>
+                    <div data-content="info">infi info info</div>
+                    <div data-content="edit">edit edit edit</div>
+                </div>
+                -->
+            </div>
+            <nav>
+            <!-- ng-repeat for menu items goes here... -->
+                <ul id="top-menu" class="nav-list">
+                    <li><a href="#/javascript" title="">javascript</a></li>
+                    <li><a href="#/css" title="">css</a></li>
+                    <li><a href="#/latest" title="">latest</a></li>
+                    <li><a href="#/html" title="">html</a></li>
+                    <li><a href="#/design" title="">design</a></li>
+                </ul>
+                <button id="toggle-mobile-menu" type="button" class="toolbar-btn menu-toggle">m</button>
+            </nav>
+        </div>
+    </div>
     <div class="row-wrapper">
-    <!-- services controller & ng-repeat goes here... -->
-    
-        <div class="services-container">
-            <div class="services-toolbar">
-                <button class="toolbar-btn help" data-content="help">?</button>
-                <button class="toolbar-btn info" data-content="info">i</button>
-                <button class="toolbar-btn edit" data-content="edit">e</button>
+        <div class="h-row">
+            <div class="clmn-8 content">
+                <section>
+                    <div ng-view></div>
+                </section>
             </div>
-            <!--
-            <div class="row-wrapper services-content">
-                <div data-content="help">help help help</div>
-                <div data-content="info">infi info info</div>
-                <div data-content="edit">edit edit edit</div>
+            <div class="clmn-4">
+                <aside class="additional">
+                 <!-- aside controller & ng-repeat goes here... -->
+                    <div class="aside-box">
+                        <div class="aside-head about"><h2><strong>about</strong></h2></div>
+                        <div class="aside-text">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                        </div>
+                    </div>
+                    <div class="aside-box">
+                        <div class="aside-head hot-news"><h2><strong>hot news</strong><h2></div>
+                        <div class="aside-text">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                        </div>
+                    </div>
+                <!-- tags controller & ng-repeat goes here... -->
+                    <div class="aside-box tags-view">
+                        <div class="tag-shape">
+                            <div class="tag-content">hello</div>
+                        </div>
+                        <div class="tag-shape">
+                            <div class="tag-content">dog</div>
+                        </div>
+                        <div class="tag-shape">
+                            <div class="tag-content">awesome</div>
+                        </div>
+                        <div class="tag-shape">
+                            <div class="tag-content">script</div>
+                        </div>
+                        <div class="tag-shape">
+                            <div class="tag-content">raccoon</div>
+                        </div>
+                        <div class="tag-shape">
+                            <div class="tag-content">html</div>
+                        </div>
+                        <div class="tag-shape">
+                            <div class="tag-content">food</div>
+                        </div>
+                        <div class="tag-shape">
+                            <div class="tag-content">accordance</div>
+                        </div>
+                    </div>
+                </aside>
             </div>
-            -->
-        </div>
-        <nav>
-        <!-- ng-repeat for menu items goes here... -->
-            <ul class="nav-list">
-                <li><a href="#/javascript" title="">javascript</a></li>
-                <li><a href="#/css" title="">css</a></li>
-                <li><a href="#/latest" title="">latest</a></li>
-                <li><a href="#/html" title="">html</a></li>
-                <li><a href="#/design" title="">design</a></li>
-            </ul>
-            <button id="toggle-mobile-menu" type="button" class="toolbar-btn menu-toggle">m</button>
-        </nav>
-    </div>
-</div>
-<div class="row-wrapper">
-    <div class="h-row">
-        <div class="clmn-8 content">
-            <section>
-                <div ng-view></div>
-            </section>
-        </div>
-        <div class="clmn-4">
-            <aside class="additional">
-             <!-- aside controller & ng-repeat goes here... -->
-                <div class="aside-box">
-                    <div class="aside-head about"><h2><strong>about</strong></h2></div>
-                    <div class="aside-text">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
-                    </div>
-                </div>
-                <div class="aside-box">
-                    <div class="aside-head hot-news"><h2><strong>hot news</strong><h2></div>
-                    <div class="aside-text">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
-                    </div>
-                </div>
-            <!-- tags controller & ng-repeat goes here... -->
-                <div class="aside-box tags-view">
-                    <div class="tag-shape">
-                        <div class="tag-content">hello</div>
-                    </div>
-                    <div class="tag-shape">
-                        <div class="tag-content">dog</div>
-                    </div>
-                    <div class="tag-shape">
-                        <div class="tag-content">awesome</div>
-                    </div>
-                    <div class="tag-shape">
-                        <div class="tag-content">script</div>
-                    </div>
-                    <div class="tag-shape">
-                        <div class="tag-content">raccoon</div>
-                    </div>
-                    <div class="tag-shape">
-                        <div class="tag-content">html</div>
-                    </div>
-                    <div class="tag-shape">
-                        <div class="tag-content">food</div>
-                    </div>
-                    <div class="tag-shape">
-                        <div class="tag-content">accordance</div>
-                    </div>
-                </div>
-            </aside>
         </div>
     </div>
-</div>
 <script data-main="js/app/main.js" src="js/3p/require.js"></script>
 <script type="text/javascript" src="temporary-layout.js"></script>
 </body>

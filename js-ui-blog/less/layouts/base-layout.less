@@ -1,28 +1,16 @@
 /* Base layout 
 ------------------------*/
 
-header{
-  position:relative;
-  height:85px;
-
-  .logo-offset{
-    display: table;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-  }
-
-  .logo-wrapper {
-    display: table-cell;
-    vertical-align: middle;
-  }
+header.logo-holder {
+  line-height: 85px;
+  text-align: center;
 
   .logo {
-      display:block;
-      margin: 0 auto;
-      width: 373px;
-      height:65px;
-      background: url(../js-ui-blog/images/logo_960.png) top left no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    width: 373px;
+    height: 65px;
+    background: url(../js-ui-blog/images/logo_960.png) top left no-repeat;
   }
 }
 
@@ -41,6 +29,11 @@ header{
   article{
     position:relative;
     padding-bottom:50px;
+    //border: red 1px solid;
+
+    figure {
+      min-height: 180px;
+    }
 
     img {
       width:100%;
@@ -63,6 +56,8 @@ header{
 }
 
 .post-box{
+  padding-bottom: 5px;
+
   header {
     text-align:right;
     padding-bottom: 5px;
@@ -92,24 +87,45 @@ header{
     z-index:5;
   }
 
-  .social-toolbar{
+  .social-wrapper{
     position:absolute;
-    top: 33px;
-    right:-15px;
+    top: 0;
+    right: -15px;
+    width: 60px;
 
-    li{
-      float:none;
-      margin-bottom:3px;
+    .social-toolbar {
+      display: block;
+      height: auto;
+
+      li {
+        float: right;
+        margin-bottom: 5px;
+
+        a {
+          border-radius:3px 0 0 3px;
+        }
+      }
     }
+
   }
 
   figure {
-    padding: 0 50px 0 0;
+    padding: 0 60px 0 0;
+
+    img {
+
+    }
   }
 
   .post-article {
     header {
       padding-right: 50px;
+    }
+  }
+
+  .meta-box {
+    .clmn-3 {
+      width: 50%;
     }
   }
 
@@ -125,8 +141,9 @@ header{
     }
   }
 
-  header{
+  header.logo-holder{
     height:50px;
+    line-height: 50px;
 
     .logo {
       width: 233px;
@@ -139,7 +156,7 @@ header{
     width:100%;
 
     article {
-      padding-bottom:70px;
+      padding-bottom:50px;
     }
   }
 
@@ -175,9 +192,32 @@ header{
     right:0;
   }
 
-  .social-toolbar{
+  .social-wrapper {
     position:absolute;
-    bottom:20px;
+    bottom:0;
+    display: block;
+    line-height: inherit;
+
+    .social-toolbar {
+      display: block;
+      text-align: justify;
+
+      li {
+        display: inline;
+        float: none;
+        margin: 0;
+
+        a {
+          display: inline-block;
+          //padding:0 10px;
+        }
+      }
+
+      .stretch {
+        display: inline-block;
+        width: 100%;
+      }
+    }
   }
 
   .meta-box{
@@ -205,6 +245,7 @@ header{
 
   figure {
     background: @color-gray-origin;
+    min-height: inherit !important;
   }
 
   .article-text {

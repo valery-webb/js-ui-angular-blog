@@ -2,26 +2,32 @@
 --------------------*/
 
 .social-wrapper {
-  padding-top: 4px;
+  text-align: right;
+  line-height: 38px;
 }
 
 .social-toolbar {
-  float:right;
-  height: 32px;
+  display: inline-block;
+  vertical-align: middle;
+  height: 30px;
+  overflow: hidden;
 
   li {
     float:left;
-    margin-right:3px;
-    height: 32px;
+    margin-left: 5px;
 
     & > a {
       text-decoration:none;
       display:block;
-      line-height: 30px;
+      line-height: 28px;
       background-color: @color-gray-light;
       color: @color-white;
-      padding:0 5px 0 20px;
+      padding:0 10px;
       border-radius:3px;
     }
+  }
+
+  li.stretch {
+    display: none;
   }
 }
