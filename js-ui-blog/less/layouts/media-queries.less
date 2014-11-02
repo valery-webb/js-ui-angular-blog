@@ -1,0 +1,216 @@
+/* Media queries
+----------------------------------*/
+
+@media screen and (min-width: 321px) and (max-width: 768px) {
+
+  ul.services-toolbar {
+
+    li:nth-child(1) > a,
+    li:nth-child(2) > a {
+      display: block;
+    }
+
+    li:nth-child(1) > a {
+      left: 0;
+    }
+
+    li:nth-child(2) > a {
+      right: 0;
+    }
+  }
+
+  .content{
+    width: 100%;
+  }
+
+  aside{
+    display:none;
+  }
+
+  .social-wrapper {
+    position:absolute;
+    top: 0;
+    right: -15px;
+    width: 60px;
+
+    .social-toolbar {
+      display: block;
+      height: auto;
+
+      li {
+        float: right;
+        margin-bottom: 5px;
+      }
+
+      li > a {
+        border-radius:3px 0 0 3px;
+      }
+    }
+  }
+
+  figure {
+    padding: 0 60px 0 0;
+  }
+
+  .post-article {
+    header {
+      padding-right: 50px;
+    }
+  }
+
+  .meta-box {
+    .clmn-3 {
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+
+  .offset-wrapper {
+    border-bottom: 0;
+    .row-wrapper {
+      line-height: 36px;
+      position: relative;
+    }
+  }
+
+  header.logo-holder{
+    line-height: 50px;
+
+    .logo {
+      width: 233px;
+      height: 37px;
+      background: url(../js-ui-blog/images/logo_320.png) top left no-repeat;
+    }
+  }
+
+  nav {
+    .menu-toggle {
+      display: block;
+      line-height: 32px;
+      width: 32px;
+      top: -34px;
+      right: 0;
+      /* move to the mixin */
+      background: @color-blue-origin;
+      color: @color-white;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+    }
+  }
+
+  ul.services-toolbar {
+
+    display: inline-block;
+    vertical-align: middle;
+    height: 34px;
+
+    li {
+      float: left;
+      margin-right: 2px;
+    }
+
+    li > a {
+      position: relative;
+      display: block;
+      line-height: 32px;
+      width: 32px;
+    }
+  }
+
+  .content {
+    width: 100%;
+
+    article {
+      padding-bottom: 50px;
+    }
+  }
+
+  aside{
+    display:none;
+  }
+
+  .social-wrapper {
+    position:absolute;
+    bottom:0;
+    display: block;
+    line-height: inherit;
+
+    .social-toolbar {
+      display: block;
+      text-align: justify;
+
+      li {
+        display: inline-block;
+        float: none;
+        margin: 0;
+      }
+
+      .stretch {
+        //display: inline-block;
+        width: 100%;
+      }
+    }
+  }
+
+  .meta-box{
+    .date, .author {
+      width:50%;
+    }
+  }
+
+  ul.nav-list {
+    display:none;
+
+    li {
+      float: none;
+      width: 100%;
+    }
+  }
+
+  figcaption {
+    font-size: 100%;
+    line-height: 160%;
+    text-align: center;
+    padding: 0 30px;
+    font-weight: bold;
+  }
+
+  figure {
+    background: @color-gray-origin;
+    min-height: inherit !important;
+  }
+
+  .article-text {
+    text-align:justify;
+  }
+
+}
+
+/* Custom points for menu font resize fixes
+-------------------------------------------------*/
+@media screen and (min-width: 500px) and (max-width: 600px) {
+    ul.nav-list{
+      li {
+        font-size: 80%;
+      }
+  }
+
+  ul.nav-list li a {
+    padding: 0 10px;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 499px) {
+    ul.nav-list{
+      li {
+        font-size: 65%;
+      }
+    }
+
+    ul.nav-list li a {
+    padding: 0 5px;
+  }
+}

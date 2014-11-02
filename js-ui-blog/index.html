@@ -21,23 +21,12 @@
     </div>
     <div class="offset-wrapper">
         <div class="row-wrapper">
-        <!-- services controller & ng-repeat goes here... -->
-            <div class="services-container">
-                <div class="services-toolbar">
-                    <button class="toolbar-btn help" data-content="help">?</button>
-                    <button class="toolbar-btn info" data-content="info">i</button>
-                    <button class="toolbar-btn edit" data-content="edit">e</button>
-                </div>
-                <!--
-                <div class="row-wrapper services-content">
-                    <div data-content="help">help help help</div>
-                    <div data-content="info">infi info info</div>
-                    <div data-content="edit">edit edit edit</div>
-                </div>
-                -->
-            </div>
+            <ul class="services-toolbar">
+                <li><a href="" class="help" data-content="help">?</a></li>
+                <li><a href="" class="info" data-content="info">i</a></li>
+                <li><a href="" class="edit" data-content="edit">e</a></li>
+            </ul>
             <nav>
-            <!-- ng-repeat for menu items goes here... -->
                 <ul id="top-menu" class="nav-list">
                     <li><a href="#/javascript" title="">javascript</a></li>
                     <li><a href="#/css" title="">css</a></li>
@@ -45,7 +34,7 @@
                     <li><a href="#/html" title="">html</a></li>
                     <li><a href="#/design" title="">design</a></li>
                 </ul>
-                <button id="toggle-mobile-menu" type="button" class="toolbar-btn menu-toggle">m</button>
+                <a href="" id="toggle-mobile-menu" type="button" rel="menu-toggler" class="menu-toggle">m</a>
             </nav>
         </div>
     </div>

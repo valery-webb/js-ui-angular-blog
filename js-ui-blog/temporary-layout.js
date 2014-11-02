@@ -1,20 +1,34 @@
 window.onload = function () {
 
-    var mBtn = document.getElementById('toggle-mobile-menu');
+    // just example, move to the angular directives
+    var mBtn = document.getElementById('toggle-mobile-menu'),
+        menuItems = document.getElementById('top-menu').getElementsByTagName('li');
 
-    mBtn.onclick = function (e) {
+    // setup listeners
+    mBtn.addEventListener('click', toggleMenu, false );
+    window.addEventListener('resize', onResizeApp, false );
 
+    [].forEach.call(menuItems, function(item) {
+        item.addEventListener('click', toggleMenu, false );
+    });
+
+    // Event handlers
+    function onResizeApp () {
+        document.getElementById('top-menu').className = 'nav-list';
+    }
+
+    function toggleMenu (e) {
         var el = e.target,
-            navList = el.previousElementSibling;
+            isMobile = document.body.clientWidth <= 320 ? true : false,
+            navList = el.rel === 'menu-toggler' ? el.previousElementSibling : el.parentNode.parentNode;
 
-        navList.className === 'nav-list mobile-opened'
-            ? navList.className = 'nav-list'
-            : navList.className = 'nav-list mobile-opened';
+        if (isMobile) {
+            navList.className === 'nav-list mobile-opened'
+                ? navList.className = 'nav-list'
+                : navList.className = 'nav-list mobile-opened';
+        }
     }
 
-    window.onresize = function () {
-    var navList = document.getElementsByTagName('nav')[0].firstElementChild;
-        navList.className = 'nav-list';
-    }
+
 
 }
