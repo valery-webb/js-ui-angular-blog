@@ -1,18 +1,18 @@
 /* Mixins
 ----------------*/
 
-.arrow-right (@arr-height: 9px, @arr-color: @color-blue-dark) {
+.arrow-right (@arr-size, @arr-color) {
   width: 0;
   height: 0;
-  border-top: @arr-height solid transparent;
-  border-bottom: @arr-height solid transparent;
-  border-left: @arr-height * 1.1 solid @arr-color;
+  border-top: @arr-size solid transparent;
+  border-bottom: @arr-size solid transparent;
+  border-left: @arr-size solid @arr-color;
 }
 
-.cicle (@radius: 10px) {
+.cicle (@radius) {
   width: @radius;
   height:@radius;
-  border-radius: @radius;
+  border-radius: @radius / 2;
 }
 
 .clear {

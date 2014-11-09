@@ -1,44 +1,51 @@
 /* Tags
 ----------------------*/
-
-.tag-shape {
-  display:inline-block;
-  overflow:hidden;
+.tag {
+  margin: 0 10px 5px 0;
+  padding: 0 15px;
+  position: relative;
+  background: @color-blue-dark;
+  line-height: 20px;
+  display: inline-block;
+  text-decoration: none;
   text-transform: capitalize;
-  cursor:pointer;
-  height:18px;
+  color: #fff;
+
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    .cicle(7px);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto 0;
+    background: @color-white;
+    z-index: 2;
+  }
 
   &:after {
+    position: absolute;
+    top: 0;
+    left: 100%;
     content: "";
-    display:inline-block;
-    .arrow-right();
+    display: block;
+    width: 0;
+    height: 0;
+    .arrow-right(10px, @color-blue-dark);
+    z-index: 1;
   }
 
-  &:hover:after {
-    .arrow-right(9px, @color-blue-light)
+  &:hover{
+    background: @color-blue-light;
   }
 
-  .tag-content {
-    position:relative;
-    background:@color-blue-dark;
-    float:left;
-    padding:0 20px;
-    color: @color-white;
-    font:95%/120% @base-font;
-
-    &:hover {
-      background:@color-blue-light;
-    }
-
-    &:after{
-      content: "";
-      position: absolute;
-      display:block;
-      .cicle(7px);
-      top:5px;
-      right:0;
-      background:@color-white;
-    }
+  &:hover::after{
+    border-color: transparent transparent transparent @color-blue-light;
   }
 }
+
+
+
 

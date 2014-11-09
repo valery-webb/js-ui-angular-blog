@@ -21,7 +21,7 @@
     </div>
     <div class="offset-wrapper">
         <div class="row-wrapper">
-            <ul class="services-toolbar">
+            <ul id="services-menu" class="services-toolbar">
                 <li><a href="" class="help" data-content="help">?</a></li>
                 <li><a href="" class="info" data-content="info">i</a></li>
                 <li><a href="" class="edit" data-content="edit">e</a></li>
@@ -40,6 +40,11 @@
     </div>
     <div class="row-wrapper">
         <div class="h-row">
+            <div id="services-content">
+                <div data-content="help">help</div>
+                <div data-content="info">info</div>
+                <div data-content="edit">edit</div>
+            </div>
             <div class="clmn-8 content">
                 <section>
                     <div ng-view></div>
@@ -62,30 +67,20 @@
                     </div>
                 <!-- tags controller & ng-repeat goes here... -->
                     <div class="aside-box tags-view">
-                        <div class="tag-shape">
-                            <div class="tag-content">hello</div>
-                        </div>
-                        <div class="tag-shape">
-                            <div class="tag-content">dog</div>
-                        </div>
-                        <div class="tag-shape">
-                            <div class="tag-content">awesome</div>
-                        </div>
-                        <div class="tag-shape">
-                            <div class="tag-content">script</div>
-                        </div>
-                        <div class="tag-shape">
-                            <div class="tag-content">raccoon</div>
-                        </div>
-                        <div class="tag-shape">
-                            <div class="tag-content">html</div>
-                        </div>
-                        <div class="tag-shape">
-                            <div class="tag-content">food</div>
-                        </div>
-                        <div class="tag-shape">
-                            <div class="tag-content">accordance</div>
-                        </div>
+                        <a class="tag" href="#">hello</a>
+                        <a class="tag" href="#">dog</a>
+                        <a class="tag" href="#">awesome</a>
+                        <a class="tag" href="#">cat</a>
+                        <a class="tag" href="#">raccoon</a>
+                        <a class="tag" href="#">html</a>
+                        <a class="tag" href="#">food</a>
+                        <a class="tag" href="#">accordance</a>
+                        <a class="tag" href="#">everebody</a>
+                        <a class="tag" href="#">meal</a>
+                        <a class="tag" href="#">corn</a>
+                        <a class="tag" href="#">cat</a>
+                        <a class="tag" href="#">summer</a>
+                        <a class="tag" href="#">sun</a>
                     </div>
                 </aside>
             </div>
